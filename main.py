@@ -1,11 +1,13 @@
 # coding: utf8
 import rectangles
 import circle
+import triangle
 
-square2 = rectangles.Square(2)
-rect1 = rectangles.Rectangle(2,3)
+import numpy as np
 
-circle1 = circle.Circle(5)
 
-print(circle1)
-print(circle1.summary())
+vec1 = np.array([0, 4])
+vec2 = np.array([4, 0])
+
+tri1 = triangle.Triangle(vec1, vec2)
+print(tri1.summary())
