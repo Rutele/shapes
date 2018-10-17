@@ -15,11 +15,20 @@ class Rectangle(Shape):
         self.a = a
         self.b = b
 
+        if self.a <= 0 or self.b <=0:
+            raise ValueError("Size cannot be negative or zero")
+
     def area(self):
         return self.a * self.b
 
     def perimeter(self):
         return 2 * (self.a + self.b)
+
+    def __str__(self):
+        return "Rectangle of dimensions {} x {}".format(self.a, self.b)
+
+    def __repr__(self):
+        return "Rectangle({},{})".format(self.a, self.b)
 
 
 class Square(Rectangle):
