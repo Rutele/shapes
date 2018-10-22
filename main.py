@@ -2,12 +2,10 @@
 import rectangles
 import circle
 import triangle
-
+import parallelogram
 import numpy as np
 
 
-vec1 = np.array([0, 4])
-vec2 = np.array([4, 0])
-
-tri1 = triangle.Triangle(vec1, vec2)
-print(tri1.summary())
+rhomb1 = parallelogram.Rhombus(4, 45)
+print(rhomb1)
+print(rhomb1.__repr__())

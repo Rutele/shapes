@@ -18,13 +18,13 @@ class Triangle(Shape):
         self.a = a
         self.b = b
 
-        if np.abs(self.a) == 0 or np.abs(self.b) == 0:
+        if np.linalg.norm(self.a) == 0 or np.linalg.norm(self.b) == 0:
             raise ValueError("Vectors cannot have zero length.")
 
         self.c = a - b
 
     def area(self):
-        return 0.5 * np.abs(self.a[0] * self.b[1] - self.a[1] * self.b[0])
+        return 0.5 * np.linalg.norm(self.a[0] * self.b[1] - self.a[1] * self.b[0])
 
     def perimeter(self):
         return np.linalg.norm(self.a) + np.linalg.norm(self.b) + np.linalg.norm(self.c)
