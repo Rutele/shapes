@@ -11,9 +11,9 @@ Its main intent is class practice during Modern Programming Techniques course.
 - [ ] add more shapes
     - [X] Triangle
     - [X] Circle
-    - [ ] Rhombus
+    - [X] Rhombus
     - [ ] Diamond
-    - [ ] Parallelogram 
+    - [X] Parallelogram
     - [ ] Trapezoid 
     - [ ] Any Quadrangle
 - [ ] add drawing of shapes using [https://matplotlib.org/](Matplotlib)

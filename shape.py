@@ -5,6 +5,11 @@ class Shape(object):
     """
     Base class for all shapes.
     """
+    x = None
+    y = None
+
+    def __init__(self, pos):
+        self.pos = pos
 
     def area(self):
         """
@@ -24,3 +29,8 @@ class Shape(object):
             'area': self.area(),
             'perimeter': self.perimeter()
         }
+
+    def draw(self, screen):
+        """
+        Draws the given shape
+        """

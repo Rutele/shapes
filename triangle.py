@@ -1,5 +1,6 @@
 from shape import Shape
 import numpy as np
+import pygame
 
 
 class Triangle(Shape):
@@ -13,8 +14,8 @@ class Triangle(Shape):
     b = None
     c = None
 
-    def __init__(self, a, b):
-        super().__init__()
+    def __init__(self, pos, a, b):
+        super().__init__(pos)
         self.a = a
         self.b = b
 
@@ -34,3 +35,7 @@ class Triangle(Shape):
 
     def __repr__(self):
         return "Triangle({},{})".format(self.a, self.b)
+
+    def draw(self, screen):
+        points = [self.pos, (self.pos + self.a * 50), (self.pos + self.b * 50)]
+        return pygame.draw.polygon(screen, (255, 255, 255), points)

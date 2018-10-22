@@ -1,5 +1,6 @@
 from shape import Shape
 import numpy as np
+import pygame
 
 
 class Circle(Shape):
@@ -9,8 +10,8 @@ class Circle(Shape):
 
     r = None
 
-    def __init__(self, r):
-        super().__init__()
+    def __init__(self, pos,r):
+        super().__init__(pos)
         self.r = r
 
         if r <= 0:
@@ -27,3 +28,6 @@ class Circle(Shape):
 
     def __repr__(self):
         return "Circle({})".format(self.r)
+
+    def draw(self, screen):
+        return pygame.draw.circle(screen, (255, 255, 255), self.pos, self.r * 50)
