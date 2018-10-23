@@ -5,11 +5,13 @@ class Shape(object):
     """
     Base class for all shapes.
     """
-    x = None
-    y = None
 
-    def __init__(self, pos):
+    pos = None
+    scale = None
+
+    def __init__(self, pos, scale):
         self.pos = pos
+        self.scale = scale
 
     def area(self):
         """
